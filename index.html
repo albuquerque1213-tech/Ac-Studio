@@ -32,3 +32,134 @@
             content: '';
             display: block;
             width: 50px;
+            height: 4px;
+            background-color: var(--tw-colors-secondary-rose); /* Sublinhado em rosa seco */
+            margin: 10px auto 0;
+            border-radius: 2px;
+        }
+
+        /* Efeito de transição suave nas fotos da galeria */
+        .gallery-item img {
+            transition: transform 0.3s ease-in-out;
+            aspect-ratio: 1 / 1; /* Força imagens quadradas para o placeholder */
+        }
+
+        .gallery-item img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body class="text-dark-text bg-white">
+
+    <!-- 1. Seção HERO / Cabeçalho -->
+    <!-- Fundo em Navy Blue para um visual elegante e clean, como solicitado. -->
+    <header class="bg-primary-navy h-screen flex items-center justify-center relative">
+        <div class="z-10 text-center text-white p-5">
+            <!-- Nome Principal com a fonte serif, como na logo --><h1 class="text-7xl md:text-9xl font-serif mb-2 tracking-wider">AC</h1>
+            <p class="text-2xl md:text-3xl font-light tracking-widest mb-2">S T U D I O</p>
+            <p class="text-lg md:text-xl font-light mb-8">ADRIELLY CAROLINA | ESPECIALISTA EM UNHAS DE GEL</p>
+            <!-- Botão principal de agendamento (Link para Google Forms) --><a href="https://forms.gle/ELLtTPH42qRYEbjHA" target="_blank" class="bg-secondary-rose hover:bg-secondary-rose/80 text-white font-semibold py-4 px-10 rounded-full uppercase shadow-xl transition duration-300 transform hover:scale-105">
+                Agende Sua Transformação
+            </a>
+        </div>
+    </header>
+
+    <!-- 2. Seção Sobre Nós --><section id="sobre" class="py-20 px-4 md:px-20 text-center">
+        <h2 class="text-4xl font-semibold mb-10 text-primary-navy section-title">Qualidade & Elegância</h2>
+        <div class="max-w-3xl mx-auto text-lg leading-relaxed">
+            <p class="mb-6">No <strong>AC Studio</strong>, sob a curadoria de Adrielly Carolina, elevamos o cuidado com as unhas a uma forma de arte. Somos especializados em alongamentos duradouros e seguros, com foco total na saúde e no design das suas unhas naturais.</p>
+            <p>Utilizamos a mais alta tecnologia em **Gel, Acrílico e Fibra de Vidro**, garantindo resultados impecáveis, resistentes e com o acabamento fino que você merece. Venha descobrir a experiência de um luxo minimalista.</p>
+        </div>
+    </section>
+
+    <!-- 3. Seção Serviços - Foco em Alongamentos --><section id="servicos" class="py-20 px-4 md:px-20 bg-light-bg text-center">
+        <h2 class="text-4xl font-semibold mb-16 text-primary-navy section-title">Nosso Menu de Alongamentos</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
+            
+            <!-- Cartão de Serviço 1: Gel --><div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 border-t-4 border-secondary-rose">
+                <div class="text-primary-navy mb-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 mx-auto" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 20v-6a4 4 0 0 1 4-4v0a4 4 0 0 1 4 4v6"/><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 3 3h7a3 3 0 0 0 3-3V5a3 3 0 0 0-3-3H12zm-3 8l-2 2h-4l2-2 4-4z"/><circle cx="12" cy="12" r="9"/></svg>
+                </div>
+                <h3 class="text-xl font-bold mb-2 text-primary-navy">Gel Clássico Estrutural</h3>
+                <p class="text-gray-600 text-sm">O alongamento mais popular, com curvatura perfeita e durabilidade superior.</p>
+            </div>
+
+            <!-- Cartão de Serviço 2: Fibra de Vidro --><div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 border-t-4 border-primary-navy">
+                <div class="text-primary-navy mb-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 mx-auto" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M20 12H4M18 6l-12 12M6 6l12 12"/></svg>
+                </div>
+                <h3 class="text-xl font-bold mb-2 text-primary-navy">Fibra de Vidro Natural</h3>
+                <p class="text-gray-600 text-sm">Fios de seda para um resultado ultra fino, leve e com aspecto 100% natural.</p>
+            </div>
+
+            <!-- Cartão de Serviço 3: Manutenção e Blindagem --><div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 border-t-4 border-secondary-rose">
+                <div class="text-primary-navy mb-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 mx-auto" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                </div>
+                <h3 class="text-xl font-bold mb-2 text-primary-navy">Manutenção e Blindagem</h3>
+                <p class="text-gray-600 text-sm">Serviço essencial para garantir a longevidade e o brilho do seu alongamento.</p>
+            </div>
+
+            <!-- Cartão de Serviço 4: Nail Art Luxo --><div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 border-t-4 border-primary-navy">
+                <div class="text-primary-navy mb-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 mx-auto" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 15s1.5 1 4 0 4-2 4-2 1.5 1 4 0 4-2 4-2V6l-2-2-4 2-4-2-4 2zM12 22l-2-2-4 2-4-2V6"/><path d="M18 10l-2 2-4-2-4 2-4-2"/></svg>
+                </div>
+                <h3 class="text-xl font-bold mb-2 text-primary-navy">Nail Art & Pedrarias Luxo</h3>
+                <p class="text-gray-600 text-sm">Designs exclusivos com folha de ouro, pedrarias e encapsulamentos sofisticados.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Seção Galeria --><section id="galeria" class="py-20 px-4 md:px-20 text-center">
+        <h2 class="text-4xl font-semibold mb-10 text-primary-navy section-title">Nossa Arte</h2>
+        <p class="text-lg mb-10">Conheça a excelência do nosso trabalho. Um toque de <span class="text-secondary-rose font-semibold">elegância</span> em cada detalhe.</p>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-7xl mx-auto">
+            <!-- As imagens devem ser quadradas para melhor visualização --><div class="gallery-item overflow-hidden rounded-lg shadow-md">
+                <img src="https://placehold.co/600x600/C08497/ffffff?text=Gel+Clássico" alt="Exemplo de Unha em Gel Clássica" class="w-full h-full object-cover">
+            </div>
+            <div class="gallery-item overflow-hidden rounded-lg shadow-md">
+                <img src="https://placehold.co/600x600/2C3E50/ffffff?text=Fibra+de+Vidro" alt="Exemplo de Fibra de Vidro" class="w-full h-full object-cover">
+            </div>
+            <div class="gallery-item overflow-hidden rounded-lg shadow-md">
+                <img src="https://placehold.co/600x600/E5E8EE/2C3E50?text=Baby+Boomer" alt="Exemplo de Unha Baby Boomer em Gel" class="w-full h-full object-cover">
+            </div>
+            <div class="gallery-item overflow-hidden rounded-lg shadow-md">
+                <img src="https://placehold.co/600x600/C08497/2C3E50?text=Nail+Art+Luxo" alt="Exemplo de Nail Art de Luxo" class="w-full h-full object-cover">
+            </div>
+        </div>
+        <p class="mt-12">
+            <a href="URL_DO_SEU_INSTAGRAM" target="_blank" class="bg-primary-navy hover:bg-primary-navy/80 text-white font-semibold py-3 px-8 rounded-full uppercase transition duration-300">
+                Veja a Galeria Completa
+            </a>
+        </p>
+    </section>
+
+    <!-- 5. Seção Contato / Agendamento --><section id="agendamento" class="py-20 px-4 md:px-20 bg-light-bg text-center">
+        <h2 class="text-4xl font-semibold mb-10 text-primary-navy section-title">Agende Seu Momento</h2>
+        <div class="max-w-2xl mx-auto text-lg leading-relaxed">
+            <p class="mb-4">Pronta para ter unhas deslumbrantes e duradouras? Fale diretamente com a Adrielly Carolina!</p>
+            
+            <div class="bg-white p-8 rounded-xl shadow-lg mt-8 text-left border-l-8 border-secondary-rose">
+                <p class="mb-3"><strong><span class="text-primary-navy">Studio:</span></strong> Rua padre Diogo rodrigues 475 A</p>
+                <p class="mb-3"><strong><span class="text-primary-navy">WhatsApp:</span></strong> (81) 9958-8505</p>
+                <p class="mb-6"><strong><span class="text-primary-navy">Horário:</span></strong> Terça a Sábado, das 9h às 18h.</p>
+                
+                <!-- Botão de WhatsApp atualizado com o link wa.link/yonfcj e novo texto --><a href="https://wa.link/yonfcj" target="_blank" class="w-full bg-secondary-rose hover:bg-secondary-rose/80 text-white font-semibold py-4 rounded-lg uppercase transition duration-300 block text-center">
+                    Fale Conosco pelo WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Rodapé --><footer class="bg-primary-navy text-white py-10 px-4 md:px-20 text-center">
+        <p class="mb-4">&copy; 2024 AC Studio Adrielly Carolina. Todos os direitos reservados.</p>
+        <div class="flex justify-center space-x-6">
+            <a href="URL_INSTAGRAM" target="_blank" class="text-white hover:text-secondary-rose transition duration-300 text-lg">Instagram</a>
+            <a href="URL_FACEBOOK" target="_blank" class="text-white hover:text-secondary-rose transition duration-300 text-lg">Facebook</a>
+            <a href="mailto:seuemail@acstudio.com.br" class="text-white hover:text-secondary-rose transition duration-300 text-lg">Email</a>
+        </div>
+    </footer>
+
+</body>
+</html>
